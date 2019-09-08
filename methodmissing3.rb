@@ -1,17 +1,18 @@
 class Car
- def self.method_missing(arg) 
-    puts "#{self}.#{arg} has not been defined"
+ def self.method_missing(my_method,*args) 
+    puts " you called #{self}.#{my_method} with the following arguments #{args}"
  end
 
- def respond_to_missing
-    puts "yes I respond to missing"
- end
+ def respond_to_missing?(my_method,*args)
+   puts " respond_to_missing? called #{self}.#{my_method} with the following arguments #{args}"
+end
 end
 
  puts "check if the class responds to method_missing"
  p Car.respond_to?(:method_missing)
  c = Car.new
- p c.respond_to?(:method_missing)
- p Car.singleton_class
- Car.bange
+ p "responding to method_missing:- #{c.respond_to?(:method_missing)}"
+ p c.methods.sort
+ c.bange
+ p c.method(:bange)
  
