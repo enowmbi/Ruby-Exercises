@@ -1,0 +1,29 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/home/enow/Projects/ruby_and_rails/ruby_exercises/testing_with_rspec/car_project/lib/car.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        1,
+        4,
+        4,
+        null,
+        null,
+        1,
+        2,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null
+      ]
+    },
+    "timestamp": 1563195654
+  }
+}
