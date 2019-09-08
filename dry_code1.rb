@@ -1,4 +1,7 @@
+require 'active_model'
 class User
+  include ActiveModel::Validations
+
   attr_accessor :valid,:balance,:authorized
 
   def user_balance
