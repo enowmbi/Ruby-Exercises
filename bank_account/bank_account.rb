@@ -2,7 +2,7 @@ class BankAccount
 
   @@number_of_accounts_created = 0
 
-  attr_reader :account_number,:saving_balance,:checking_balance
+  attr_reader :account_number,:saving_balance,:checking_balance,:account_type
   attr_accessor :account_owner
 
   def initialize(account_owner,account_type,options ={})
@@ -24,40 +24,37 @@ class BankAccount
   end
 
   def withdraw(account_type,amount = 0)
-     if account_type.downcase == "checking"
-        if @checking_balance >= amount
-          @checking_balance -= amount  
-        else
-          puts "Not enough funds in checking acount"
-        end
-     elsif account_type.downcase == "saving"
-      if @saving_balance >= amount
-          @saving_balance -= amount
+    if account_type.downcase == "checking"
+      if @checking_balance >= amount
+        @checking_balance -= amount  
       else
-          puts "Not enough funds in the saving account"
+        puts "Not enough funds in checking acount"
       end
-     else
-        puts "Account type does not exist"
-     end
-  end
-
-  def get_account_information
-    p "------------------------------------"
-    p "Account Owner:  #{@account_owner}"
-    p "Account Type:  #{@account_type}"
-    if  @account_type.downcase == "saving" 
-      p "Account Balance: #{@saving_balance}" 
-    elsif @account_type.downcase == "checking"
-      p "Account Balance: #{@checking_balance}"
+    elsif account_type.downcase == "saving"
+      if @saving_balance >= amount
+        @saving_balance -= amount
+      else
+        puts "Not enough funds in the saving account"
+      end
     else
-      p "Account type does not exist"
+      puts "Account type does not exist"
     end
   end
 
+  def get_account_information
+    balance = 0
+    if  @account_type.downcase == "saving" 
+    balance = @saving_balance 
+    elsif @account_type.downcase == "checking"
+     balance = @checking_balance
+    else
+      "Account type does not exist"
+    end
+    p "Account Owner: #{@account_owner}, Account Type: #{@account_type}, Account Balance: #{balance}"
+  end
+
   def self.get_number_of_accounts_created
-    p "============================================="  
-    p "Total number of accounts created: #{@@number_of_accounts_created} "
-    p "============================================="
+    @@number_of_accounts_created
   end
 
   private
@@ -78,7 +75,7 @@ ba = BankAccount.new("John Doe","checking")
 ba.get_account_information
 ba2 = BankAccount.new("Jane Doe","saving")
 ba2.get_account_information
-BankAccount.get_number_of_accounts_created
+p "Number of bank accounts created: #{BankAccount.get_number_of_accounts_created}"
 ba.deposit("checking",1000)
 ba.deposit("checking",500)
 ba2.deposit("saving",5000)
