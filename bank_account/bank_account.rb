@@ -14,6 +14,7 @@ class BankAccount
   end
 
   def deposit(account_type,amount = 0)
+    amount = amount.to_f.abs
     if (account_type == "saving")
       @saving_balance += amount
     elsif (account_type == "checking")
@@ -24,6 +25,7 @@ class BankAccount
   end
 
   def withdraw(account_type,amount = 0)
+    # amount = amount.to_f.abs
     if account_type.downcase == "checking"
       if @checking_balance >= amount
         @checking_balance -= amount  
