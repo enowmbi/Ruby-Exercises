@@ -43,12 +43,22 @@ class BankAccount
     end
   end
 
+  def get_account_balance(account_type)
+    if account_type.downcase == "saving"
+      @saving_balance
+    elsif account_type.downcase =="checking"
+      @checking_balance
+    else
+      return "account type does not exist"
+    end
+  end
+
   def get_account_information
     balance = 0
     if  @account_type.downcase == "saving" 
-    balance = @saving_balance 
+      balance = @saving_balance 
     elsif @account_type.downcase == "checking"
-     balance = @checking_balance
+      balance = @checking_balance
     else
       "Account type does not exist"
     end
@@ -88,3 +98,5 @@ ba.withdraw("checking",1750)
 ba2.withdraw("saving",700)
 ba.get_account_information
 ba2.get_account_information
+p ba.get_account_balance("checking")
+p ba2.get_account_balance("saving")
