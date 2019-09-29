@@ -1,14 +1,15 @@
 #linear search
+#start comparing values for a match from the first element of the list to the where the match is found or to the end of the list
 
-def linear_search(array,search_value)
+def linear_search(list,search_value)
 
- array.each_with_index do |value,index|
+ list.each_with_index do |value,index|
 
-    return "#{search_value} found at position #{index + 1} of array" if value == search_value
+    return "#{search_value} found at position #{index + 1} of list" if value == search_value
 
  end
 
-    return "#{search_value} not found in array"
+    return "#{search_value} not found in list"
 
 end
 
