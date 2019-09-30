@@ -1,24 +1,93 @@
-require 'benchmark'
+=begin
+ I'll create a class that has three methods - which list prime numbers up to a given number n
+ for each method I'll calculate the running using Ruby benchmark library or module 
 
-result = Benchmark.measure do 
-  x = 1
-  prime =[]
-  max = 20
-  y = 1
-  until x > max
-    while y < max/2
-      #if x == 1 || x == 2 || x == 3 || x == 5 || x == 7
-      if x % y !=0
-        puts x is prime prime << x
-      elsif x % 2 > 0 && x % 3 > 0 && x % 5 > 0 && x % 7 > 0
-        prime << x
-      end  
-      y+=1
-    end
+Note
+ - prime number is a number divisable by 1 and by itself
+=end
 
-    x+=1
+require 'benchmark.rb'
+
+class PrimeNumber
+
+ def is_prime?(n)
+  
+  2.upto(Math.sqrt(n)) do |i|
+    return false if n % i == 0 
   end
-  p "Prime numbers from 1 to #{max} are #{prime}"
+ 
+  return true
+ end
+
+ def is_prime2?(n)
+  
+  2.upto(n/2) do |i|
+    return false if n % i == 0 
+  end
+ 
+  return true
+ end
+
+ def is_prime3?(n)
+  
+  2.upto(n-1) do |i|
+    return false if n % i == 0 
+  end
+ 
+  return true
+ end
+ 
+ def get_prime_number(n)
+  primes = []
+  2.upto(n-1) do |i|
+  
+    primes << i if is_prime?(i)
+
+  end
+ return "Prime numbers up to #{n} include: #{primes}"
+
+ end
+
+def get_prime_number(n)
+  primes = []
+  2.upto(n-1) do |i|
+  
+    primes << i if is_prime2?(i)
+
+  end
+ return "Prime numbers up to #{n} include: #{primes}"
+
+ end
+
+def get_prime_number(n)
+  primes = []
+  2.upto(n-1) do |i|
+  
+    primes << i if is_prime3?(i)
+
+  end
+ return "Prime numbers up to #{n} include: #{primes}"
+
+ end
 
 end
-p result
+
+
+pn = PrimeNumber.new
+puts ""
+result = Benchmark.measure do 
+ puts "using sqrt(n) - #{pn.get_prime_number(20000)}"
+end
+puts result
+
+puts "================="
+result = Benchmark.measure do 
+ puts "using n/2 - #{pn.get_prime_number(20000)}"
+end
+puts result
+
+puts "================="
+result = Benchmark.measure do 
+ puts "using n-1 - #{pn.get_prime_number(20000)}"
+end
+puts result
