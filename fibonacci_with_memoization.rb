@@ -1,14 +1,25 @@
-def fibonacci(n)
-f = Array.new(40)
- if n == 0 || n == 1
-  f[n] = n
- end
+=begin
+ Use memoization to improve performance of this algorithm - reducing the computational complexity
+ create an array to hold values 
+ for any computation - store the value in the variables
+=end
 
- f[n] = fibonacci(n-1) + fibonacci(n-2)
- p f[n]
- return f[n]
+def fibonacci(n)
+
+ fibs = {}
+
+ return n if n == 0 || n == 1
+
+ return fibs[n] if fibs[n] #keys.include?(n)
+
+ fibs[n] = fibonacci(n - 1) + fibonacci(n - 2)
+
 end
 
 
-fibonacci(40)
+require 'benchmark.rb'
+report = Benchmark.measure do 
+puts fibonacci(40)
+end
+puts report
 
