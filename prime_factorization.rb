@@ -21,8 +21,6 @@ for i <- 2 to i <- sqrt(n)
 
 def prime_factors(n)
 
-prime_factors = []
-
   2.upto(Math.sqrt(n)) do |i|
 
    if n % i == 0
