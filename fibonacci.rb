@@ -6,6 +6,11 @@ def fibonacci(number)
  end
 end
 
-puts "displaying fibonacci value of #{35}: #{fibonacci(35)}"
+require 'benchmark.rb'
+
+report = Benchmark.measure do 
+puts "displaying fibonacci value of #{40}: #{fibonacci(40)}"
+end
+puts report
 
 
