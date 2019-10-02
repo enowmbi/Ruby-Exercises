@@ -25,18 +25,30 @@ end
 
 =end
 
+=begin
+  We use the sieve of Eratosthenes to obtain the prime numbers up to a given a number n
+  
+steps
+  - iterate through all numbers from 0 or 1 or 2 to number and create an array and assign each the value of true (1)
+  - set 1 and 0 to false(0) since they are not prime numbers - do this only if you started the previous step from 0
+  - while prime it's still prime which is the case of list before the first iteration 
+  - iterate from 2 to square root of n, and then set all their multiples to false .e.g 
+
+
+=end
+
 def sieve_of_eratosthenes(number)
  primes = []
 
  0.upto(n) do |i|
   primes[i] = 1
  end
- primes[0] =0
- primes[1] =0
+ primes[0] = 0
+ primes[1] = 0
 
- 2.upto(n) do |i|
+ 2.upto(n) do |j|
   if primes[i] == 1
-    2.upto(
+    (k+1).upto(
 
 
 
