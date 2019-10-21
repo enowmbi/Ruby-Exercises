@@ -5,10 +5,24 @@
 =end
 
 def first_recurring_xter(string)
- # take string and split 
+  sequence = {}
+  string.split('').each do |char|
+   if sequence[char] 
+     return "The first recurrent character in the string #{string} is #{char}"
+   else
+     sequence[char] = char
+   end
+  end
 
-
-
-
-
+   return "No recurrent character found in the string #{string}!"
 end
+
+
+puts first_recurring_xter("ABBCD")
+puts "============================"
+puts first_recurring_xter("ABCA")
+puts "============================"
+puts first_recurring_xter("BCABA")
+puts "============================"
+puts first_recurring_xter("ABC")
+
