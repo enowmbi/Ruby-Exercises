@@ -6,7 +6,7 @@
 
 def first_recurring_xter(string)
   sequence = {}
-  string.split('').each do |char|
+  string.each_char do |char|
    if sequence[char] 
      return "The first recurrent character in the string #{string} is #{char}"
    else
