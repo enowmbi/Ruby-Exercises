@@ -6,20 +6,31 @@
 
 def fibonacci(n)
 
- fibs = {}
+  fibs = {}
 
- return n if n == 0 || n == 1
+  if n == 0
+    fibs[0] = 0
+    return fibs[0]
+  end
 
- return fibs[n] if fibs[n] #keys.include?(n)
+  if n == 1
+    fibs[1] = 1
+    return fibs[1]
+  end
 
- fibs[n] = fibonacci(n - 1) + fibonacci(n - 2)
+  if fibs[n]
+    return fibs[n]
+  else
+    fibs[n] = fibonacci(n - 1) + fibonacci(n - 2)
+    return fibs[n]
+  end
 
 end
 
 
 require 'benchmark.rb'
 report = Benchmark.measure do 
-puts fibonacci(40)
+  puts fibonacci(40)
 end
 puts report
 
