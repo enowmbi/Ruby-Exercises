@@ -1,6 +1,7 @@
 =begin 
  Prime factorization
  Expressing a number in terms of multiples of it's prime factors e.g 24 = 2 * 12 => 2 * 2 * 6 => 2 * 2 * 2 * 3
+ Note: time complexity
 
 for i <- 2 to i <- sqrt(n)
 {
