@@ -9,15 +9,15 @@ class Player
 
   def get_random_coin_option()
     coin_options = ['head','tail']
-    @coin_option = rand() > 0.5 ? 1:0
-    return coin_options[@coin_option]
+    @coin_option = coin_options[rand() > 0.5 ? 1:0]
+    return @coin_option
   end
 
   def did_player_win?(winning_flip)
     if @coin_option == winning_flip
-      puts "#{@name} is the winner"
+      puts "#{@name} Won with a flip of #{@coin_option}"
     else
-      puts "#{@name} is the loser"
+      puts "#{@name} Lost with a flip of #{@coin_option}"
     end
   end
 
@@ -33,7 +33,7 @@ class Player
     return @coin_option
   end
 
-  def to_s
+  def get_name
     return @name
   end
 
