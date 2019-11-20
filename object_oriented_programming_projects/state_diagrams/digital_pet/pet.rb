@@ -3,7 +3,7 @@ class Pet
   def initialize(name)
     @state = "Happy"
     @name = name
-    puts "#{@name} is #{@state}"
+    puts "#{@name} is #{@state}".rjust(50,'*')
   end
 
 =begin
