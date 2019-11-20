@@ -6,21 +6,6 @@ class Pet
     puts "#{@name} is #{@state}".rjust(50,'*')
   end
 
-=begin
-  def receive_stimuli(stimuli)
-    if @state == "Happy" && stimuli == "Punishment"
-      @state = "Sad"
-    elsif @state == "Sad" && stimuli == "Punishment"
-      @state = "Heart Broken"
-    elsif @state == "Sad" && stimuli =="Punishment"
-      @state = "Heart Broken"
-    elsif @state == "Sad" && stimuli == "Praise"
-      @state = "Happy"
-    end
-  end
-
-=end
-
   def receive_punishment
     if @state == "Happy"
       @state = "Sad"
