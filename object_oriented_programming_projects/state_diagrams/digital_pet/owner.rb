@@ -6,14 +6,14 @@ class Owner
     @name = name_of_owner
   end
 
-  def punish_pet()
+  def punish_pet
     @pet.receive_punishment
-    puts "#{@pet.get_name} is #{@pet.get_state()}".rjust(50,'*')
+    return "#{@pet.get_name} is #{@pet.get_state()}".rjust(50,'*')
   end
 
-  def praise_pet()
+  def praise_pet
     @pet.receive_praise
-    puts "#{@pet.get_name} is #{@pet.get_state()}".rjust(50,'*')
+    return "#{@pet.get_name} is #{@pet.get_state()}".rjust(50,'*')
   end
 
 end
