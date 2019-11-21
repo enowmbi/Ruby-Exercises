@@ -17,10 +17,10 @@ until entry == 'x' do
     owner = Owner.new('Max')
   end
   if entry == '1'
-    owner.punish_pet()
+    puts owner.punish_pet()
   end
   if entry == '2'
-    owner.praise_pet()
+    puts owner.praise_pet()
   end
 
 end
