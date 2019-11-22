@@ -21,6 +21,33 @@
 					"defaultDiagram": true
 				}
 			]
+		},
+		{
+			"_type": "UMLStateMachine",
+			"_id": "AAAAAAFulJcxOnLyyrc=",
+			"_parent": {
+				"$ref": "AAAAAAFF+h6SjaM2Hec="
+			},
+			"name": "StateMachine1",
+			"ownedElements": [
+				{
+					"_type": "UMLStatechartDiagram",
+					"_id": "AAAAAAFulJcxPHL0miw=",
+					"_parent": {
+						"$ref": "AAAAAAFulJcxOnLyyrc="
+					},
+					"name": "StatechartDiagram1"
+				}
+			],
+			"regions": [
+				{
+					"_type": "UMLRegion",
+					"_id": "AAAAAAFulJcxPHLzjQE=",
+					"_parent": {
+						"$ref": "AAAAAAFulJcxOnLyyrc="
+					}
+				}
+			]
 		}
 	]
 }
