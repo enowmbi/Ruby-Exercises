@@ -98,7 +98,7 @@
 											"width": 167,
 											"height": 13,
 											"underline": true,
-											"text": ":Bank"
+											"text": "Bank"
 										},
 										{
 											"_type": "LabelView",
@@ -220,7 +220,7 @@
 											"width": 167,
 											"height": 13,
 											"underline": true,
-											"text": ": ATM"
+											"text": "ATM"
 										},
 										{
 											"_type": "LabelView",
@@ -342,7 +342,7 @@
 											"width": 167,
 											"height": 13,
 											"underline": true,
-											"text": ":Customer"
+											"text": "Customer"
 										},
 										{
 											"_type": "LabelView",
@@ -464,7 +464,7 @@
 											"width": 167,
 											"height": 13,
 											"underline": true,
-											"text": ":Account"
+											"text": "Account"
 										},
 										{
 											"_type": "LabelView",
@@ -586,7 +586,7 @@
 											"width": 167,
 											"height": 13,
 											"underline": true,
-											"text": ":ATMTransaction"
+											"text": "ATMTransaction"
 										},
 										{
 											"_type": "LabelView",
@@ -708,7 +708,7 @@
 											"width": 167,
 											"height": 13,
 											"underline": true,
-											"text": ":DebitCard"
+											"text": "DebitCard"
 										},
 										{
 											"_type": "LabelView",
@@ -830,7 +830,7 @@
 											"width": 167,
 											"height": 13,
 											"underline": true,
-											"text": ":SavingsAccount"
+											"text": "SavingsAccount"
 										},
 										{
 											"_type": "LabelView",
@@ -952,7 +952,7 @@
 											"width": 167,
 											"height": 13,
 											"underline": true,
-											"text": ":CheckingAccount"
+											"text": "CheckingAccount"
 										},
 										{
 											"_type": "LabelView",
@@ -1932,9 +1932,9 @@
 										"$ref": "AAAAAAFuk2tds+Qm/M0="
 									},
 									"font": "Arial;13;0",
-									"left": 487,
+									"left": 486,
 									"top": 574,
-									"width": 5.05908203125,
+									"width": 6.5,
 									"height": 13,
 									"alpha": 0.5235987755982988,
 									"distance": 25,
@@ -2608,16 +2608,16 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": -218,
+									"left": -395,
 									"top": 643,
-									"width": 809.046875,
+									"width": 1163.0048828125,
 									"height": 13,
 									"alpha": -0.5235987755982988,
 									"distance": 30,
 									"hostEdge": {
 										"$ref": "AAAAAAFuk2vZIuWeoTA="
 									},
-									"text": "/ / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / "
+									"text": "/ / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / "
 								},
 								{
 									"_type": "EdgeLabelView",
@@ -2942,7 +2942,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFuk1uwhwkghXc="
 					},
-					"name": ":Bank",
+					"name": "Bank",
 					"ownedElements": [
 						{
 							"_type": "UMLLink",
@@ -3045,6 +3045,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFuk1uwhwkghXc="
 					},
+					"name": "ATM",
 					"ownedElements": [
 						{
 							"_type": "UMLLink",
@@ -3076,8 +3077,7 @@
 								"multiplicity": "1"
 							}
 						}
-					],
-					"classifier": "ATM"
+					]
 				},
 				{
 					"_type": "UMLObject",
@@ -3085,7 +3085,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFuk1uwhwkghXc="
 					},
-					"name": ":Customer"
+					"name": "Customer"
 				},
 				{
 					"_type": "UMLObject",
@@ -3093,7 +3093,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFuk1uwhwkghXc="
 					},
-					"name": ":Account",
+					"name": "Account",
 					"ownedElements": [
 						{
 							"_type": "UMLLink",
@@ -3190,7 +3190,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFuk1uwhwkghXc="
 					},
-					"name": ":ATMTransaction"
+					"name": "ATMTransaction"
 				},
 				{
 					"_type": "UMLObject",
@@ -3198,7 +3198,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFuk1uwhwkghXc="
 					},
-					"name": ":DebitCard",
+					"name": "DebitCard",
 					"ownedElements": [
 						{
 							"_type": "UMLLink",
@@ -3239,7 +3239,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFuk1uwhwkghXc="
 					},
-					"name": ":SavingsAccount"
+					"name": "SavingsAccount"
 				},
 				{
 					"_type": "UMLObject",
@@ -3247,7 +3247,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFuk1uwhwkghXc="
 					},
-					"name": ":CheckingAccount"
+					"name": "CheckingAccount"
 				}
 			]
 		}
