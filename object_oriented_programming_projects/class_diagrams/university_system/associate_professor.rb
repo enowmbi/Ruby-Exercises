@@ -1,0 +1,4 @@
+class AssociateProfessor < Professor
+
+
+end
