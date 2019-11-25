@@ -1,0 +1,4 @@
+class SavingAccount < BankAccount
+
+
+end
