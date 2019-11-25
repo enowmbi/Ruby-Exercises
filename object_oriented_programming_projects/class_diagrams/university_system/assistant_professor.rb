@@ -1,0 +1,4 @@
+class AssistantProfessor < Professor
+
+
+end
