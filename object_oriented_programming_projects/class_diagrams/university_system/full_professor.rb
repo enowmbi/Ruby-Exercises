@@ -1,0 +1,3 @@
+class FullProfessor < Professor
+
+end
