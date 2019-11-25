@@ -1,0 +1,3 @@
+class Office < Building
+
+end
