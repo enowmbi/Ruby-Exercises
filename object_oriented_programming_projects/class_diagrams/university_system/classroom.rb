@@ -1,0 +1,4 @@
+class Classroom < Building
+
+
+end
